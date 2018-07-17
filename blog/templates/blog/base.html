@@ -1,0 +1,34 @@
+{% load static %}
+
+<html>
+<head>
+  <title>Django Girls KC Blog</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+  <!-- Google Font - Lobster -->
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+</head>
+<body>
+  
+  <div class='page-header'>
+      <h1><a href="/">Django Girls KC Blog</a></h1>
+      <p>This is a sample app from the <a href="https://tutorial.djangogirls.org/en" target="_blank">Django Girls tutorial</a></p>
+  </div>
+
+  <div class="content container">
+    <div class="row">
+      <div class="col-md-8">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
